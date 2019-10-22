@@ -17,8 +17,14 @@ $(function() {
 //WhatsApp
 $(document).ready(function(){
 	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		$(".WhatsAppSender").attr("href", 'whatsapp://send?phone=5548');
+		$(".WhatsAppSender").attr("href", 'whatsapp://send?phone=5548999237664');
 	} else {
-		$(".WhatsAppSender").attr("href", 'https://web.whatsapp.com/send?phone=5548');
+		$(".WhatsAppSender").attr("href", 'https://web.whatsapp.com/send?phone=5548999237664');
 	}
+});
+
+$(document).ready(function(){
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("footer-year").innerHTML = n;
 });
