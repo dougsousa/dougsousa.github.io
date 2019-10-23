@@ -35,7 +35,7 @@ body {
 .section-title {
     font-family: 'Maven Pro';
     font-weight: 700;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.15rem;
 }
 .section-subtitle {
     font-family: 'Source Code Pro';
@@ -100,7 +100,7 @@ nav#navbar {
     position: relative;
     z-index: 100;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     #home {
         background-attachment: unset;
         background-position: top left 60%;
@@ -131,7 +131,6 @@ nav#navbar {
 }
 #social-buttons a svg {
     height: 24px;
-    padding-left: 1px;
 }
 
 /* Footer */
