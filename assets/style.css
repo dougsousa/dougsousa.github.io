@@ -133,6 +133,13 @@ nav#navbar {
     height: 24px;
 }
 
+/* Portfolio */
+@media (min-width: 792px) {
+    #portfolio img {
+        max-width: 48%;
+    }
+}
+
 /* Footer */
 #footer {
     background: rgb(37, 49, 49);
