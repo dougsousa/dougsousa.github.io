@@ -1,108 +1,130 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#0D76A0">
-    <title>Douglas Sousa</title>
-    <link rel="icon" href="images/logo.png">
-    <!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Douglas Sousa DEV</title>
+	<link rel="icon" href="images/logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+	<link rel="stylesheet" href="dougsousa-g.css">
+	<link rel="stylesheet" href="dougsousa-l.css">
+	<style type="text/css">
+		.img-portfolio {
+			width: 100%;
+			height: 250px;
+			border-radius: 8px;
+			margin-top: 8px;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-7243260-2']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 </head>
 <body>
-
-    <section id="nav">
-        <nav id="navbar">
-            <div id="navbar-logo"><a class="tonamove" href="#home">D.</a></div>
-            <div id="navbar-links">
-                <a class="tonamove" href="#portfolio">Portfolio</a>
-            </div>
-        </nav>
-    </section>
-
-    <section id="home" class="section-content d-flex flex-row justify-content-initial align-items-center py-5">
-        <div id="home-into" class="container py-5">
-            <div class="text-white">
-                <h1 class="section-title mt-2 mb-3">Douglas Sousa</h1>
-                <p class="section-subtitle m-0 p-0">Developer</p>
-                <div id="social-buttons" class="mt-5">
-                    <a href="https://github.com/dougsousa" target="_blank">
-                        <svg viewBox="0 0 496 512">
-                            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://linkedin.com/in/douglasalexandresousa" target="_blank">
-                        <svg viewBox="0 0 448 512">
-                            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
-                        </svg>
-                    </a>
-                    <a href="mailto:douglasalexandresousa@gmail.com" target="_blank">
-                        <svg viewBox="0 0 512 512">
-                            <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="portfolio" class="section-content bg-light">
-        <div class="container py-5">
-            <div class="row py-5">
-                <div class="col-12 mb-5">
-                    <h2 class="section-title">Portfolio</h2>
-                    <p class="section-subtitle">O que eu faço</p>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="bg-white shadow rounded p-4">
-                        <h3 class="mb-3">Capas Car Capas Automotivas</h3>
-                        <img class="img-fluid rounded" src="portfolio/capascar.png">
-                        <a class="btn btn-info w-100 mt-4" href="http://capascar.com.br" target="_blank">Acessar</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 mt-5 mt-lg-0">
-                    <div class="bg-white shadow rounded p-4">
-                        <h3 class="mb-3">Cris Bonatelli Costuras e Bordados</h3>
-                        <img class="img-fluid rounded" src="portfolio/crisbonatelli.png">
-                        <a class="btn btn-info w-100 mt-4" href="http://crisbonatelli.com.br" target="_blank">Acessar</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 mt-5">
-                    <div class="bg-white shadow rounded p-4">
-                        <h3 class="mb-3">Artibus Tecnologia</h3>
-                        <img class="img-fluid rounded" src="portfolio/artibus.png">
-                        <a class="btn btn-info w-100 mt-4" href="http://artibus.com.br" target="_blank">Acessar</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 mt-5">
-                    <div class="bg-white shadow rounded p-4">
-                        <h3 class="mb-3">Embeasy <small class="text-muted">SaaS</small></h3>
-                        <img class="img-fluid rounded" src="portfolio/artibus-embeasy.png">
-                        <a class="btn btn-info w-100 mt-4" href="http://artibus.com.br/sobre-o-embeasy" target="_blank">Acessar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="footer">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 text-center">
-                    &copy; <span id="footer-year"></span> Douglas Sousa
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- JS -->
-	<script type="text/javascript" src="assets/jquery3.4.1.min.js"></script>
-	<script type="text/javascript" src="assets/popper.min.js"></script>
-    <script type="text/javascript" src="assets/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/main.js"></script>
-
+	<!-- <nav>
+		<div class="logo"></div>
+		<ul class="menu">
+			<div class="menu__item toggle"><span></span></div>
+			<li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-linkedin"></i></a></li>
+			<li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i></a></li>
+		</ul>
+	</nav> -->
+	<div class="hero">
+		<h1 class="hero__title">Douglas Sousa</h1>
+		<p class="hero__description">Developer | Data Scientist</p>
+	</div>
+	<div class="hero__terminal">
+		<pre>
+			<!-- Place your demo code here -->
+			<code class="shell-session demo">dougsousa ~ $ </code>
+		</pre>
+	</div>
+	<div class="wrapper">
+		<div class="installation">
+			<h3 class="section__title">Skills</h3>
+			<div class="tab__container">
+				<ul class="tab__menu">
+					<li class="tab active" data-tab="mac">Front-end</li>
+					<li class="tab" data-tab="linux">Back-end</li>
+					<li class="tab" data-tab="win">Data Science</li>
+				</ul>
+				<pre class="nohighlight code">
+					<code class="tab__pane active mac">
+						~ $ HTML <br>
+						~ $ CSS <br>
+						~ $ Javascript
+					</code>
+					<code class="tab__pane linux">
+						~ $ PHP <br>
+						~ $ MySQL <br>
+						~ $ SQLite
+					</code>
+					<code class="tab__pane win">
+						~ $ Python <br>
+						~ $ Statistic <br>
+						~ $ PowerBI
+					</code>
+				</pre>
+			</div>
+		</div>
+		<h3 class="section__title" style="margin-top: 60px;">PORTFOLIO</h3>
+		<div class="feature">
+			<div class="feature__item">
+				<h3 class="section__title">Capas Car</h3>
+				<a href="http://capascar.com.br" target="_blank"><img class="img-portfolio" src="portfolio/capascar.png"></a>
+				<p>Website, loja virtual e sistema de gestão. <span class="code code--inline"><a href="http://capascar.com.br" target="_blank">Visitar</a></span></p>
+			</div>
+			<div class="feature__item">
+				<h3 class="section__title">Cris Bonatelli</h3>
+				<a href="http://crisbonatelli.com.br" target="_blank"><img class="img-portfolio" src="portfolio/crisbonatelli.png"></a>
+				<p>Website, loja virtual e sistema de gestão. <span class="code code--inline"><a href="http://crisbonatelli.com.br" target="_blank">Visitar</a></span></p>
+			</div>
+			<div class="feature__item">
+				<h3 class="section__title">Artibus Tecnologia</h3>
+				<a href="http://artibus.com.br" target="_blank"><img class="img-portfolio" src="portfolio/artibus.png"></a>
+				<p>Desenvolvimento web e serviços/softwares online. <span class="code code--inline"><a href="http://artibus.com.br" target="_blank">Visitar</a></span></p>
+			</div>
+			<div class="feature__item">
+				<h3 class="section__title">Embeasy <span class="code code--inline">SaaS	</span></h3>
+				<a href="http://artibus.com.br/sobre-o-embeasy" target="_blank"><img class="img-portfolio" src="portfolio/artibus-embeasy.png"></a>
+				<p>Software para bordados computadorizados. <span class="code code--inline"><a href="http://artibus.com.br/sobre-o-embeasy" target="_blank">Visitar</a></span></p>
+			</div>
+		</div>
+		<!-- <div class="keybinding">
+			<ul class="keybinding__detail">
+				<h3 class="keybinding__title">Default Keybindings</h3>
+				<li>Quit without saving <span class="keybinding__label">Ctrl+C</span></li>
+				<li>Save <span class="keybinding__label">Cmd+S</span></li>
+				<li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
+				<li>Undo <span class="keybinding__label">Cmd+Z</span></li>
+			</ul>
+			<ul class="keybinding__detail">
+				<h3 class="keybinding__title">Markdown Keybindings</h3>
+				<li><span class="keybinding__label">Ctrl+A</span> Insert Link Markdown</li>
+				<li><span class="keybinding__label">Ctrl+I</span> Insert Image Markdown</li>
+				<li><span class="keybinding__label">Ctrl+V</span> Insert YouTube Video</li>
+				<li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
+			</ul>
+		</div> -->
+		<div class="callout">
+			<p>Me acompanhe nas redes sociais e saiba mais</p>
+			<a href="https://instagram.com/engdouglassousa" class="button--primary"><i class="fa fa-instagram"></i> Instagram</a>
+		</div>
+	</div>
+	<footer class="footer">&copy; 2021 Douglas Sousa</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="dougsousa.js"></script>
 </body>
 </html>
