@@ -292,7 +292,12 @@ table td:first-child {
 /* layout */
 .wrapper {
 	margin: 0 auto;
-	width: 80%;
+	width: 70%;
+}
+@media screen and (max-width: 600px) {
+	.wrapper {
+		width: 90%;
+	}
 }
 
 .footer {
