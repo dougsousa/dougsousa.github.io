@@ -2,5 +2,9 @@
   "keyfin": 1,
   "keyfinaction": "",
   "keymr": 1,
-  "keymraction": ""
+  "keymraction": "",
+  "keyauto": 1,
+  "keyautoaction": "",
+  "keygeneral": 1,
+  "keygeneralaction": ""
 }
