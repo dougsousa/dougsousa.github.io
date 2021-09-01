@@ -3,8 +3,8 @@
   "keyfinaction": "",
   "keymr": 1,
   "keymraction": "",
-  "keyauto": 0,
-  "keyautoaction": "www.artibus.com.br",
+  "keyauto": 1,
+  "keyautoaction": "",
   "keygeneral": 1,
   "keygeneralaction": ""
 }
