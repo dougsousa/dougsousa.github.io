@@ -6,8 +6,8 @@
   "keymr3": 0,
   "keymr7": 0,
   "keymrSecondAction": "",
-  "keyauto": 1,
+  "keyauto": 0,
   "keyautoaction": "",
-  "keygeneral": 1,
+  "keygeneral": 0,
   "keygeneralaction": ""
 }
