@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Academia</title>
+	<style type="text/css">
+
+		* {
+			font-family: sans-serif;
+			outline: none;
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			background: #9977FF;
+		}
+
+		section {
+			margin: 20px;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.25);
+			border-radius: 10px;
+		}
+
+		p {
+			margin-top: 20px;
+		}
+
+		fieldset {
+			padding: 10px;
+			margin-top: 20px;
+			border-radius: 10px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main>
+		
+		<section>
+			<h2 style="text-align: center;">Academia</h2>
+		</section>
+
+		<section>
+
+			<h4>Exercícios do dia</h4>
+
+			<fieldset>
+				<legend>Abdominais</legend>
+				<span>Repetições: </span>
+				<input type="checkbox" id="ab1"> <label for="ab1">20</label>
+				<input type="checkbox" id="ab2"> <label for="ab2">40</label>
+				<input type="checkbox" id="ab3"> <label for="ab3">60</label>
+				<input type="checkbox" id="ab4"> <label for="ab4">80</label>
+				<input type="checkbox" id="ab5"> <label for="ab5">100</label>
+				<input type="number" id="ab6" min="100" value="100" style="margin-left: 20px;">
+			</fieldset>
+
+			<fieldset>
+				<legend>Pernas</legend>
+				<span>Repetições: </span>
+				<input type="checkbox" id="pe1"> <label for="pe1">20</label>
+				<input type="checkbox" id="pe2"> <label for="pe2">40</label>
+				<input type="checkbox" id="pe3"> <label for="pe3">60</label>
+				<input type="checkbox" id="pe4"> <label for="pe4">80</label>
+				<input type="checkbox" id="pe5"> <label for="pe5">100</label>
+				<input type="number" id="pe6" min="100" value="100" style="margin-left: 20px;">
+			</fieldset>
+
+		</section>
+
+		<section>
+			<h4>Exercícios do mês</h4>
+			<fieldset>
+				<legend>Período</legend>
+				<label>Mês:</label>
+				<select>
+					<option value="01">Janeiro</option>
+					<option value="02">Fevereiro</option>
+					<option value="03">Março</option>
+					<option value="04">Abril</option>
+					<option value="05">Maio</option>
+					<option value="06">Junho</option>
+					<option value="07">Julho</option>
+					<option value="08">Agosto</option>
+					<option value="09">Setembro</option>
+					<option value="10">Outubro</option>
+					<option value="11">Novembro</option>
+					<option value="12">Dezembro</option>
+				</select>
+				<label>Ano:</label>
+				<select>
+					<option value="2022">2022</option>
+					<option value="2023">2023</option>
+				</select>
+			</fieldset>
+			<p>Abdominais: 840</p>
+			<p>Pernas: 1020</p>
+		</section>
+
+	</main>
+
+</body>
+</html>
