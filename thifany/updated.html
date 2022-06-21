@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Dia 12.06.2022</title>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+			outline: 0;
+			font-family: "Ubuntu", "Arial", "Verdana", sans-serif;
+		}
+		body {
+			background-color: #9977FF;
+		}
+
+		main {
+			position: relative;
+			z-index: 1;
+			background-image: url('fundo.jpg');
+			background-size: cover;
+			width: 100%;
+			height: 100vh;
+		}
+		main:after {
+			position: absolute;
+			z-index: 10;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+		}
+
+		div.botao {
+			position: fixed;
+			z-index: 1000;
+			bottom: 15px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #9977FF;
+			color: #FFFFFF;
+			border: none;
+			font-weight: bold;
+			font-size: 16pt;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			text-align: center;
+			font-family: "Arial", "Verdana", sans-serif;
+			cursor: pointer;
+		}
+		div.botaoprev {
+			left: 15px;
+		}
+		div.botaonext {
+			right: 15px;
+		}
+		div.botao:hover {
+			background: #7755DD;
+		}
+
+		section {
+			position: relative;
+			z-index: 100;
+			font-family: 'Ubuntu';
+			width: 100%;
+			height: 100%;
+			padding: 30px 10px 10px 10px;
+		}
+		section h3 {
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		section h4 {
+			text-align: center;
+			font-size: 1rem;
+			margin-bottom: 20px;
+		}
+		section div {
+			text-align: center;
+			height: 65%;
+		}
+		section div img {
+			max-height: 100%;
+			max-width: 100%;
+			border-radius: 10px;
+			border: 5px solid #FFFFFF;
+		}
+
+	</style>
+</head>
+<body>
+
+	<main>
+
+		<div id="prev" class="botao botaoprev" data-direction="prev"><</div>
+		<div id="next" class="botao botaonext" data-direction="next">></div>
+		
+		<!-- sections -->
+
+	</main>
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const user = urlParams.get('user');
+		if (user == "Thifany") {
+			$("main").show();
+		} else {
+			$("aside").show();
+		}
+		url = window.location.toString().split('?')[0];
+		window.history.replaceState({}, document.title, url);
+
+		const slide = [
+			{
+				titulo: "Olá, minha <b>amada</b>!",
+				subtitulo: "Hoje é um dia especial!",
+				imagem: "0-coracao.jpg"
+			}
+			,{
+				titulo: "Vamos contar um pouquinho do processo?!",
+				subtitulo: "Segue alguns momentos que encontrei, pra relembrar!",
+				imagem: "1-momentos.jpg"
+			}
+			,{
+				titulo: "Para que eu pudesse me aproximar, foram vários dias de oração e jejum",
+				subtitulo: "",
+				imagem: "2-orando.jpg"
+			}
+			,{
+				titulo: "Fomos fazer trilha em 28/11/2021, conheci seus pais, e você mais de perto",
+				subtitulo: "",
+				imagem: "3-trilha.png"
+			}
+			,{
+				titulo: "Não falávamos muito, mas em 23/12/2021 você aceitou almoçar comigo",
+				subtitulo: "<small>Estava um pouco ansioso/nervoso, nem comi muito haha</small>",
+				imagem: "4-almoco.jpg"
+			}
+			,{
+				titulo: "Aqui foi no natal (25/12/2021), já estávamos conversando aos poucos",
+				subtitulo: "",
+				imagem: "5-natal.png"
+			}
+			,{
+				titulo: "Passamos a virada de ano juntos, e depois ainda fomos jantar juntos (01/01/2022)",
+				subtitulo: "",
+				imagem: "6-virada.jpg"
+			}
+			,{
+				titulo: "Depois foram muitos dias de conversa, e construindo amizade",
+				subtitulo: "",
+				imagem: "7-amigos.png"
+			}
+			,{
+				titulo: "Outros momentos bem divertidos, momentos de loucura, rsrs",
+				subtitulo: "",
+				imagem: "8-doida.png"
+			}
+			,{
+				titulo: "Você foi num casamento, foi a coreógrafa da turma",
+				subtitulo: "<small>Registre-se que não me convidou haha</small>",
+				imagem: "9-casamento.png"
+			}
+			,{
+				titulo: "Foi uma caminhada bem longa, mas... chegamos na ponte que nos levou onde precisava",
+				subtitulo: "",
+				imagem: "10-caminhada.png"
+			}
+			,{
+				titulo: "Fui bravo, permaneci firme, porque valeu muito a pena",
+				subtitulo: "Além de especial, é muuuito linda",
+				imagem: "11-linda.png"
+			}
+			,{
+				titulo: "Conversando... Te observando... Compartilhando os dias...",
+				subtitulo: "Na academia...",
+				imagem: "12-academia.png"
+			}
+			,{
+				titulo: "Nas coisas da igreja...",
+				subtitulo: "",
+				imagem: "13-igreja.png"
+			}
+			,{
+				titulo: "Até que, em 26/05/2022, uma noite especial, o Senhor nos uniu!",
+				subtitulo: "",
+				imagem: "14-casal.jpg"
+			}
+			,{
+				titulo: "Hoje, 12/06/2022, estamos aqui... jantando à beira mar, no dia dos namorados",
+				subtitulo: "",
+				imagem: "15-praia.jpg"
+			}
+			,{
+				titulo: "E pra confirmar no teu coração... te pergunto:",
+				subtitulo: "",
+				imagem: "16-pergunta.jpg"
+			}
+			,{
+				titulo: '<h1 style="font-size: 30pt;margin-bottom: 30px;color: darkred;padding: 10px;background: rgba(255, 255, 255, 0.5);font-weight: 700;border-radius: 10px;margin:auto 10px;text-align:center">Namora comigo?</h1>',
+				subtitulo: "",
+				imagem: "17-namoro.jpg"
+			}
+		]
+
+		for (var i = 0; i < Object.keys(slide).length; i++) {
+			if (i == 0) {
+				$("main").append("<section class='slides' id='slide"+i+"'><h3>"+slide[i].titulo+"</h3><h4>"+slide[i].subtitulo+"</h4><div><img src='"+slide[i].imagem+"'></div></section>");
+			} else {
+				$("main").append("<section class='slides' id='slide"+i+"' style='display:none'><h3>"+slide[i].titulo+"</h3><h4>"+slide[i].subtitulo+"</h4><div><img src='"+slide[i].imagem+"'></div></section>");
+			}
+		}
+
+		let secativo = 0;
+		let numerosec = $(".slides").length;
+		$(".botao").click(function(){
+			if ($(this).attr('data-direction') == "prev") {
+				let secatual = secativo
+				secativo--;
+				$("#slide"+secatual).hide();
+				$("#slide"+secativo).show();
+			}
+			if ($(this).attr('data-direction') == "next") {
+				let secatual = secativo
+				secativo++;
+				$("#slide"+secatual).hide();
+				$("#slide"+secativo).show();
+			}
+			if (secativo == 0) {
+				$("#prev").hide();
+			} else {
+				$("#prev").show();
+			}
+			if (secativo == numerosec-1) {
+				$("#next").hide();
+			} else {
+				$("#next").show();
+			}
+		});
+		$(document).ready(function(){
+			$("#prev").hide();
+		});
+	</script>
+
+</body>
+</html>
