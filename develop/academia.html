@@ -33,6 +33,24 @@
 			margin-top: 20px;
 			border-radius: 10px;
 		}
+		fieldset div {
+			display: inline-block;
+		}
+
+		input[type="number"] {
+			margin-left: 20px;
+		}
+
+		@media screen and (max-width: 720px) {
+			fieldset div {
+				display: block;
+			}
+
+			input[type="number"] {
+				margin-left: 0px;
+				margin-top: 10px;
+			}
+		}
 
 	</style>
 </head>
@@ -51,23 +69,33 @@
 			<fieldset>
 				<legend>Abdominais</legend>
 				<span>Repetições: </span>
-				<input type="checkbox" id="ab1"> <label for="ab1">20</label>
-				<input type="checkbox" id="ab2"> <label for="ab2">40</label>
-				<input type="checkbox" id="ab3"> <label for="ab3">60</label>
-				<input type="checkbox" id="ab4"> <label for="ab4">80</label>
-				<input type="checkbox" id="ab5"> <label for="ab5">100</label>
-				<input type="number" id="ab6" min="100" value="100" style="margin-left: 20px;">
+				<div class="item"><input type="checkbox" class="checkitem" id="ab1"> <label for="ab1">20</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab2" disabled> <label for="ab2">40</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab3" disabled> <label for="ab3">60</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab4" disabled> <label for="ab4">80</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab5" disabled> <label for="ab5">100</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab6" disabled> <label for="ab6">120</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab7" disabled> <label for="ab7">140</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab8" disabled> <label for="ab8">160</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab9" disabled> <label for="ab9">180</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="ab10" disabled> <label for="ab10">200</label></div>
+				<div class="item"><input type="number" min="201" value="201" disabled></div>
 			</fieldset>
 
 			<fieldset>
 				<legend>Pernas</legend>
 				<span>Repetições: </span>
-				<input type="checkbox" id="pe1"> <label for="pe1">20</label>
-				<input type="checkbox" id="pe2"> <label for="pe2">40</label>
-				<input type="checkbox" id="pe3"> <label for="pe3">60</label>
-				<input type="checkbox" id="pe4"> <label for="pe4">80</label>
-				<input type="checkbox" id="pe5"> <label for="pe5">100</label>
-				<input type="number" id="pe6" min="100" value="100" style="margin-left: 20px;">
+				<div class="item"><input type="checkbox" class="checkitem" id="pe1"> <label for="pe1">20</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe2" disabled> <label for="pe2">40</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe3" disabled> <label for="pe3">60</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe4" disabled> <label for="pe4">80</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe5" disabled> <label for="pe5">100</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe6" disabled> <label for="pe6">120</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe7" disabled> <label for="pe7">140</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe8" disabled> <label for="pe8">160</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe9" disabled> <label for="pe9">180</label></div>
+				<div class="item"><input type="checkbox" class="checkitem" id="pe10" disabled> <label for="pe10">200</label></div>
+				<div class="item"><input type="number" min="201" value="201" disabled></div>
 			</fieldset>
 
 		</section>
@@ -102,6 +130,31 @@
 		</section>
 
 	</main>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(".checkitem").click(function(){
+			let id = $(this).attr('id');
+			let ident = id.slice(0,2);
+			let numero = parseInt(id.substring(2));
+			let newnumero = numero + 1;
+
+			if ($('#'+id).is(":checked")) {
+				console.log("ligou - "+ident+newnumero);
+				if (newnumero < 10) {
+					$("#"+ident+newnumero).removeAttr("disabled");
+				}
+			} else {
+				console.log("desligou");
+				if (newnumero < 10) {
+					for (var i = newnumero; i <= 10; i++) {
+						$("#"+ident+i).prop('checked', false);
+						$("#"+ident+i).attr("disabled", true);
+					}
+				}
+			}
+		});
+	</script>
 
 </body>
 </html>
