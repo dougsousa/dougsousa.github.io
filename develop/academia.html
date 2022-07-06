@@ -141,12 +141,12 @@
 
 			if ($('#'+id).is(":checked")) {
 				console.log("ligou - "+ident+newnumero);
-				if (newnumero < 10) {
+				if (numero < 10) {
 					$("#"+ident+newnumero).removeAttr("disabled");
 				}
 			} else {
 				console.log("desligou");
-				if (newnumero < 10) {
+				if (numero < 10) {
 					for (var i = newnumero; i <= 10; i++) {
 						$("#"+ident+i).prop('checked', false);
 						$("#"+ident+i).attr("disabled", true);
